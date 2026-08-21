@@ -14,7 +14,7 @@ public class ArcheryRework implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.initialize();
 	}
 
 	public static Identifier id(String path) {

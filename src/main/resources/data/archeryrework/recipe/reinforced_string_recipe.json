@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "~~~",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:bamboo",
+    "~": "minecraft:string"
+  },
+  "result": {
+    "id": "archeryrework:reinforced_string",
+    "count": 3
+  }
+}
