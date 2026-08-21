@@ -13,6 +13,7 @@ public class ModItems
 {
 
     public static final Item REINFORCED_STRING = register(ModItemIds.REINFORCED_STRING, Item::new, new Item.Properties());
+    public static final Item REINFORCED_LEATHER = register(ModItemIds.REINFORCED_LEATHER, Item::new, new Item.Properties());
 
     public static Item register(ResourceKey<Item> itemKey,
                                 Function<Item.Properties, Item> itemFactory,
@@ -33,5 +34,7 @@ public class ModItems
         // Add item to creative menu
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.REINFORCED_STRING));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
+                .register((creativeTab) -> creativeTab.accept(ModItems.REINFORCED_LEATHER));
     }
 }

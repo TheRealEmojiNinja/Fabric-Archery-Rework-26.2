@@ -9,6 +9,7 @@ public class ModItemIds
 {
 
     public static final ResourceKey<Item> REINFORCED_STRING = create("reinforced_string");
+    public static final ResourceKey<Item> REINFORCED_LEATHER = create("reinforced_leather");
 
     // Helper method to create a resource key given its name
     public static ResourceKey<Item> create(String name)
