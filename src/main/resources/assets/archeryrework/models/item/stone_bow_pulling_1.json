@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "archeryrework:item/bow_stone_pulling_1"
+  }
+}

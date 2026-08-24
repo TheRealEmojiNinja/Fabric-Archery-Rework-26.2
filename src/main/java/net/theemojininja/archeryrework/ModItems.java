@@ -3,9 +3,9 @@ package net.theemojininja.archeryrework;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.references.ItemIds;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 
 import java.util.function.Function;
 
@@ -14,6 +14,9 @@ public class ModItems
 
     public static final Item REINFORCED_STRING = register(ModItemIds.REINFORCED_STRING, Item::new, new Item.Properties());
     public static final Item REINFORCED_LEATHER = register(ModItemIds.REINFORCED_LEATHER, Item::new, new Item.Properties());
+    //BOW = registerItem(ItemIds.BOW, BowItem::new, (new Item.Properties()).durability(384).enchantable(1));
+    public static final Item STONE_BOW = register(ModItemIds.STONE_BOW, BowItem::new, (new Item.Properties()).durability(400).enchantable(1));
+
 
     public static Item register(ResourceKey<Item> itemKey,
                                 Function<Item.Properties, Item> itemFactory,
@@ -36,5 +39,8 @@ public class ModItems
                 .register((creativeTab) -> creativeTab.accept(ModItems.REINFORCED_STRING));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
                 .register((creativeTab) -> creativeTab.accept(ModItems.REINFORCED_LEATHER));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT)
+                .register((creativeTab) -> creativeTab.accept(ModItems.STONE_BOW));
     }
 }
+
